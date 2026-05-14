@@ -74,12 +74,13 @@
       padding:14px 28px;
       border-radius:10px;
       text-decoration:none;
-      margin-right:15px;
       font-weight:bold;
+      transition:0.3s;
     }
 
-    .btn-secondary{
-      background:#2d2d2d;
+    .btn:hover{
+      opacity:0.9;
+      transform:scale(1.03);
     }
 
     .hero img{
@@ -110,29 +111,39 @@
       padding:30px;
       border-radius:20px;
       box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
     }
 
     .card h3{
       color:#8b4513;
       margin-bottom:15px;
+      font-size:24px;
     }
 
-    .demo{
+    .card p{
+      line-height:1.6;
+    }
+
+    .about{
       padding:70px 10%;
       text-align:center;
     }
 
-    .demo h2{
+    .about h2{
       color:#8b4513;
-      margin-bottom:30px;
+      margin-bottom:25px;
       font-size:42px;
     }
 
-    video{
-      width:90%;
+    .about p{
       max-width:900px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      margin:auto;
+      line-height:1.8;
+      font-size:18px;
     }
 
     footer{
@@ -189,7 +200,7 @@
     <h2>Halli-Santhe Digital</h2>
 
     <p>
-      Hyper-local marketplace app connecting village artisans
+      A Hyper-Local Marketplace App connecting village artisans
       with urban buyers using Flutter, Firebase and GenAI.
     </p>
 
@@ -199,16 +210,11 @@
        View Project
     </a>
 
-    <a class="btn btn-secondary"
-       href="#demo">
-       Watch Demo
-    </a>
-
   </div>
 
   <img
-  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-  alt="Marketplace App">
+    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+    alt="Marketplace App">
 
 </section>
 
@@ -219,52 +225,63 @@
   <div class="feature-grid">
 
     <div class="card">
+
       <h3>🛍 Artisan Upload</h3>
 
       <p>
-        Upload handmade products with images and pricing.
+        Local artisans can upload handmade products
+        with images and pricing.
       </p>
+
     </div>
 
     <div class="card">
+
       <h3>🤖 GenAI Search</h3>
 
       <p>
-        Smart AI-powered search suggestions for better discovery.
+        Smart AI-powered search suggestions improve
+        product discoverability.
       </p>
+
     </div>
 
     <div class="card">
+
       <h3>🔥 Firebase Backend</h3>
 
       <p>
-        Real-time Firestore and Cloud Storage integration.
+        Real-time Firestore database and Cloud Storage integration.
       </p>
+
     </div>
 
     <div class="card">
+
       <h3>📱 Responsive UI</h3>
 
       <p>
-        Modern Flutter-based responsive interface.
+        Modern Flutter-based responsive interface
+        for smooth user experience.
       </p>
+
     </div>
 
   </div>
 
 </section>
 
-<section class="demo" id="demo">
+<section class="about">
 
-  <h2>Application Demo</h2>
+  <h2>About the Project</h2>
 
-  <video controls autoplay muted>
-
-    <source src="demo.mp4" type="video/mp4">
-
-    Your browser does not support video playback.
-
-  </video>
+  <p>
+    Halli-Santhe Digital is an internship project developed to empower
+    local village artisans by providing a digital marketplace platform.
+    The application helps artisans showcase handmade products while enabling
+    urban customers to discover authentic local crafts through a modern
+    mobile experience powered by Flutter, Firebase and GenAI features.
+  </p>
 
 </section>
 
@@ -277,4 +294,5 @@
 </footer>
 
 </body>
+
 </html>
