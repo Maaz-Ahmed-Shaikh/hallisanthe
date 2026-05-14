@@ -2,293 +2,279 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Halli-Santhe Digital</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
     }
 
-    body {
-      background: #f5f1e8;
-      color: #333;
+    body{
+      background:#f5f1e8;
+      color:#333;
     }
 
-    header {
-      background: #8b4513;
-      color: white;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+    header{
+      background:#8b4513;
+      color:white;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
     }
 
-    header h1 {
-      font-size: 32px;
+    header h1{
+      font-size:32px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:bold;
     }
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 80px 10%;
-      flex-wrap: wrap;
-      gap: 40px;
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:80px 10%;
+      flex-wrap:wrap;
+      gap:40px;
     }
 
-    .hero-text {
-      max-width: 550px;
+    .hero-text{
+      max-width:550px;
     }
 
-    .hero-text h2 {
-      font-size: 52px;
-      color: #8b4513;
-      margin-bottom: 20px;
+    .hero-text h2{
+      font-size:52px;
+      color:#8b4513;
+      margin-bottom:20px;
     }
 
-    .hero-text p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin-bottom: 30px;
+    .hero-text p{
+      font-size:20px;
+      line-height:1.6;
+      margin-bottom:30px;
     }
 
-    .btn {
-      display: inline-block;
-      background: #8b4513;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      border-radius: 10px;
-      margin-right: 15px;
-      margin-top: 10px;
-      font-weight: bold;
-      transition: 0.3s;
+    .btn{
+      display:inline-block;
+      background:#8b4513;
+      color:white;
+      padding:14px 28px;
+      border-radius:10px;
+      text-decoration:none;
+      margin-right:15px;
+      font-weight:bold;
     }
 
-    .btn:hover {
-      opacity: 0.9;
-      transform: scale(1.03);
+    .btn-secondary{
+      background:#2d2d2d;
     }
 
-    .btn-secondary {
-      background: #2d2d2d;
+    .hero img{
+      width:350px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
     }
 
-    .hero img {
-      width: 360px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    .features{
+      padding:70px 10%;
+      text-align:center;
     }
 
-    .features {
-      padding: 70px 10%;
-      text-align: center;
+    .features h2{
+      color:#8b4513;
+      margin-bottom:50px;
+      font-size:42px;
     }
 
-    .features h2 {
-      color: #8b4513;
-      margin-bottom: 50px;
-      font-size: 42px;
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
     }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
     }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      transition: 0.3s;
+    .card h3{
+      color:#8b4513;
+      margin-bottom:15px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .demo{
+      padding:70px 10%;
+      text-align:center;
     }
 
-    .card h3 {
-      color: #8b4513;
-      margin-bottom: 15px;
-      font-size: 24px;
+    .demo h2{
+      color:#8b4513;
+      margin-bottom:30px;
+      font-size:42px;
     }
 
-    .card p {
-      line-height: 1.6;
+    video{
+      width:90%;
+      max-width:900px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
     }
 
-    .demo-section {
-      padding: 70px 10%;
-      text-align: center;
+    footer{
+      background:#8b4513;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
     }
 
-    .demo-section h2 {
-      color: #8b4513;
-      margin-bottom: 30px;
-      font-size: 42px;
-    }
+    @media(max-width:900px){
 
-    video {
-      width: 90%;
-      max-width: 900px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-      background: #8b4513;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-    }
-
-    @media(max-width:900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
+      .hero{
+        flex-direction:column;
+        text-align:center;
       }
 
-      .hero img {
-        width: 280px;
+      .hero img{
+        width:280px;
       }
 
-      .hero-text h2 {
-        font-size: 40px;
+      .hero-text h2{
+        font-size:40px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <h1>Halli-Santhe</h1>
+  <h1>Halli-Santhe</h1>
 
-    <nav>
-      <a href="#features">Features</a>
+  <nav>
 
-      <a href="https://github.com/Maaz-Ahmed-Shaikh/hallisanthe"
-        target="_blank">
-        GitHub
-      </a>
-    </nav>
+    <a href="#features">Features</a>
 
-  </header>
+    <a href="https://github.com/Maaz-Ahmed-Shaikh/hallisanthe"
+       target="_blank">
+       GitHub
+    </a>
 
-  <section class="hero">
+  </nav>
 
-    <div class="hero-text">
+</header>
 
-      <h2>Halli-Santhe Digital</h2>
+<section class="hero">
 
-      <p>
-        A Hyper-Local Marketplace App connecting village artisans
-        with urban buyers through a modern Flutter & Firebase platform.
-      </p>
+  <div class="hero-text">
 
-      <a class="btn"
-        href="https://github.com/Maaz-Ahmed-Shaikh/hallisanthe"
-        target="_blank">
-        View Project
-      </a>
-
-      <a class="btn btn-secondary"
-        href="#demo">
-        Watch Demo
-      </a>
-
-    </div>
-
-    <img
-      src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-      alt="Marketplace App">
-
-  </section>
-
-  <section class="features" id="features">
-
-    <h2>Features</h2>
-
-    <div class="feature-grid">
-
-      <div class="card">
-        <h3>🛍 Artisan Upload</h3>
-
-        <p>
-          Local artisans can upload handmade products
-          with images and pricing.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🤖 GenAI Search</h3>
-
-        <p>
-          AI-powered smart search suggestions improve
-          product discoverability.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🔥 Firebase Backend</h3>
-
-        <p>
-          Real-time Firestore database and cloud image storage integration.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>📱 Responsive UI</h3>
-
-        <p>
-          Modern Flutter-based responsive interface
-          for smooth user experience.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="demo-section" id="demo">
-
-    <h2>Application Demo</h2>
-
-    <video controls autoplay muted>
-
-      <source src="20260514-2006-36.3147932.mp4"
-        type="video/mp4">
-
-    </video>
-
-  </section>
-
-  <footer>
+    <h2>Halli-Santhe Digital</h2>
 
     <p>
-      Halli-Santhe Digital • Internship Project • Built with Flutter & Firebase
+      Hyper-local marketplace app connecting village artisans
+      with urban buyers using Flutter, Firebase and GenAI.
     </p>
 
-  </footer>
+    <a class="btn"
+       href="https://github.com/Maaz-Ahmed-Shaikh/hallisanthe"
+       target="_blank">
+       View Project
+    </a>
+
+    <a class="btn btn-secondary"
+       href="#demo">
+       Watch Demo
+    </a>
+
+  </div>
+
+  <img
+  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+  alt="Marketplace App">
+
+</section>
+
+<section class="features" id="features">
+
+  <h2>Features</h2>
+
+  <div class="feature-grid">
+
+    <div class="card">
+      <h3>🛍 Artisan Upload</h3>
+
+      <p>
+        Upload handmade products with images and pricing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 GenAI Search</h3>
+
+      <p>
+        Smart AI-powered search suggestions for better discovery.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Firebase Backend</h3>
+
+      <p>
+        Real-time Firestore and Cloud Storage integration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Responsive UI</h3>
+
+      <p>
+        Modern Flutter-based responsive interface.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="demo" id="demo">
+
+  <h2>Application Demo</h2>
+
+  <video controls autoplay muted>
+
+    <source src="demo.mp4" type="video/mp4">
+
+    Your browser does not support video playback.
+
+  </video>
+
+</section>
+
+<footer>
+
+  <p>
+    Halli-Santhe Digital • Internship Project • Built with Flutter & Firebase
+  </p>
+
+</footer>
 
 </body>
-
 </html>
